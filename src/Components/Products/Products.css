@@ -1,0 +1,61 @@
+.products {
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product {
+    flex-basis: 31%;
+    position: relative;
+    overflow: hidden; /* Ensures captions do not overflow */
+}
+
+.caption {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 15, 152, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #d8dae8;
+    cursor: pointer;
+    opacity: 0;
+    padding: 20px;
+    transition: opacity 0.4s, padding-top 0.4s;
+}
+
+.caption img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.product:hover .caption {
+    opacity: 1;
+    padding: 30% 20px; /* Adjusted padding for better visibility */
+}
+
+@media (max-width: 650px) {
+    .products {
+        flex-direction: column;
+        gap: 30px; /* Added gap for better spacing */
+    }
+    
+    .product {
+        flex-basis: 100%;
+        margin: 20px 0; /* Adjusted margin for better responsiveness */
+    }
+}

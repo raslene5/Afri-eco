@@ -1,0 +1,53 @@
+.message-section {
+    background: #f8f8f8;
+    padding: 50px 0;
+  }
+  
+  .message-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .message-card h2 {
+    color: #212ea0;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .message-card h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #18b016;
+    display: block;
+    margin: 10px auto 0;
+  }
+  
+  .message-intro {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .message-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .message-signature {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    text-align: right;
+  }
+  

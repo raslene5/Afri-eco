@@ -1,0 +1,77 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Resetting default styles and setting global font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+/* Setting a background color for the body */
+body {
+  background: #f5f5f5;
+}
+
+/* Styling links */
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Creating a container with padding */
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* Styling buttons */
+.btn {
+  background: #fff;
+  color: #212121;
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+/* Dark mode button variant */
+.btn.dark-btn {
+  background: #212ea0;
+  color: #fff;
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+  background: #f0f0f0;
+}
+
+.btn.dark-btn:hover {
+  background: #1a1e81;
+  color: #fff;
+}
+
+/* Media query for responsive design */
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn {
+    padding: 14px 22px; /* Adjusted button padding for smaller screens */
+  }
+}
