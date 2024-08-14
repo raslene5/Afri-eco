@@ -8,6 +8,7 @@
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 50px;
+    box-sizing: border-box; /* Ensure padding does not affect width */
 }
 
 .about-left {
@@ -21,6 +22,7 @@
 
 .about-img {
     width: 100%;
+    max-width: 100%; /* Ensure image does not overflow */
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -46,22 +48,22 @@
 
 .about h3 {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem; /* Use relative units */
     color: #212EA0;
 }
 
 .about h2 {
-    font-size: 35px;
+    font-size: 2.2rem; /* Use relative units */
     margin: 10px 0;
     color: #212EA0;
-    max-width: 400px;
+    max-width: 100%; /* Ensure text does not overflow */
 }
 
 .about p {
-    font-size: 16px;
+    font-size: 1rem; /* Use relative units */
     color: #333;
     line-height: 1.6;
-    max-width: 400px;
+    max-width: 100%; /* Ensure text does not overflow */
 }
 
 /* media query */

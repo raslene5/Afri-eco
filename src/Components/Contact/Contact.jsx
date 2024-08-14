@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 import './Contact.css';
-import msg_icon from '../../assets/msg-icon.png';
-import mail_icon from '../../assets/mail-icon.png';
-import phone_icon from '../../assets/phone-icon.png';
-import location_icon from '../../assets/location-icon.png';
-import white_arrow from '../../assets/white-arrow.png';
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -39,23 +35,23 @@ const Contact = () => {
   return (
     <div className='contact'>
       <div className='contact-col'>
-        <h3>Send us a message <img src={msg_icon} alt='Message Icon' /></h3>
+        <h3>Send us a message <FaPaperPlane /></h3>
         <p>Feel free to reach out through the contact form or find our contact information below. Your feedback, questions, and suggestions are important to us as we strive to provide exceptional service to our community.</p>
         <ul>
-          <li><img src={mail_icon} alt='Email Icon' />Contact@AfriEcoHabitat</li>
-          <li><img src={phone_icon} alt='Phone Icon' />+216-9290246</li>
-          <li><img src={location_icon} alt='Location Icon' />The industrial zone EL Ertiyeh<br /> MA 8189, Jendouba</li>
+          <li><FaEnvelope /> Contact@AfriEcoHabitat</li>
+          <li><FaPhone /> +216-9290246</li>
+          <li><FaMapMarkerAlt /> The industrial zone EL Ertiyeh<br /> MA 8189, Jendouba</li>
         </ul>
       </div>
       <div className='contact-col'>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className="contact-form">
           <label htmlFor='name'>Your name</label>
           <input type='text' name='name' id='name' placeholder='Enter your name' required />
           <label htmlFor='phone'>Phone Number</label>
-          <input type='tel' name='phone' id='phone' placeholder='Enter your mobile number' required />
+          <input type='tel' name='phone' id='phone' placeholder='Enter your mobile number' pattern="[0-9]+" required />
           <label htmlFor='message'>Write your message here</label>
           <textarea name='message' id='message' rows={6} placeholder='Enter your message' required></textarea>
-          <button type='submit' className='btn dark-btn'>Submit now <img src={white_arrow} alt='Arrow Icon' /></button>
+          <button type='submit' className='btn dark-btn'>Submit now <FaPaperPlane /></button>
         </form>
         <span>{result}</span>
       </div>

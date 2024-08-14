@@ -1,4 +1,4 @@
-/* src/components/Hero/Hero.css */
+/* Hero Section */
 .hero {
     width: 100%;
     min-height: 100vh;
@@ -11,8 +11,10 @@
     text-align: center;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url('../../../assets/hero.png');
 }
 
+/* Overlay for darker background */
 .hero::before {
     content: '';
     position: absolute;
@@ -25,6 +27,7 @@
     transition: opacity 0.3s ease;
 }
 
+/* Hero Content */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -32,21 +35,28 @@
     animation: fadeIn 1s ease-in-out;
 }
 
+/* Hero Text */
 .hero-text {
     max-width: 700px;
     margin: 0 auto;
     animation: slideIn 1s ease-in-out;
 }
 
+/* Main Heading */
 .hero-text h1 {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.hero-text h1:hover {
+    color: #4fa245; /* Change color on hover */
+}
+
+/* Paragraph Text */
 .hero-text p {
     font-size: 20px;
     line-height: 1.6;
@@ -54,6 +64,7 @@
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Button Styling */
 .btn {
     background: rgba(8, 0, 58, 0.8);
     color: #ffffff;
@@ -64,6 +75,14 @@
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     position: relative;
     z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    outline: none; /* Remove default outline */
+}
+
+.btn:focus {
+    outline: 3px solid #4fa245; /* Add focus outline for accessibility */
 }
 
 .btn:hover {
@@ -74,6 +93,92 @@
 
 .btn img {
     margin-left: 10px;
+}
+
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    animation: zoomIn 0.3s ease;
+}
+
+/* Popup Close Button */
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    z-index: 1100;
+}
+
+.popup-close:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    background: #000;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 720px;
+}
+
+/* Video Player */
+.video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Popup Information */
+.popup-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.popup-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.popup-info p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* Animations */
@@ -87,7 +192,12 @@
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* Media queries */
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Media Queries */
 @media (max-width: 850px) {
     .hero-text h1 {
         font-size: 40px;
@@ -103,5 +213,14 @@
     .hero-text p {
         font-size: 16px;
         margin: 15px auto 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-text h1 {
+        font-size: 24px;
+    }
+    .hero-text p {
+        font-size: 14px;
     }
 }

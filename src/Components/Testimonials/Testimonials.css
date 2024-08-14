@@ -1,11 +1,17 @@
+/* Testimonials Section */
 .testimonials {
     margin: 80px auto;
     padding: 0 80px;
     position: relative;
     max-width: 1200px;
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    background: #f8f9fa; /* Added background for contrast */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+/* Navigation Arrows */
 .next-btn, .back-btn {
     position: absolute;
     top: 50%;
@@ -16,37 +22,43 @@
     border-radius: 50%;
     cursor: pointer;
     background: #212ea0;
-    transition: background 0.3s;
+    color: #fff;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .next-btn:hover, .back-btn:hover {
     background: #1b1e96;
+    transform: translateY(-50%) scale(1.1); /* Slight scale effect on hover */
 }
 
 .next-btn {
-    right: 0;
+    right: 10px;
 }
 
 .back-btn {
-    left: 0;
+    left: 10px;
 }
 
+/* Slider Container */
 .slider {
     display: flex;
     overflow: hidden;
-    margin-top: 30px; /* Added margin for separation */
+    margin-top: 30px;
 }
 
 .slider ul {
     display: flex;
-    width: 400%; /* Adjusted width for better responsiveness */
+    width: 400%;
     transition: transform 0.5s ease-in-out;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
 .slider ul li {
     list-style: none;
     width: 25%;
     padding: 20px;
+    box-sizing: border-box; /* Ensure padding does not affect width */
 }
 
 .slide {
@@ -55,7 +67,7 @@
     border-radius: 10px;
     background: #fff;
     transition: transform 0.3s, box-shadow 0.3s;
-    height: 100%; /* Ensured slides occupy full height */
+    height: 100%;
 }
 
 .slide:hover {
@@ -95,6 +107,7 @@
     font-size: 16px;
 }
 
+/* Responsive Design */
 @media (max-width: 800px) {
     .testimonials {
         padding: 0 40px;
@@ -103,20 +116,20 @@
     .next-btn, .back-btn {
         padding: 10px;
         width: 35px;
-        height: 35px; /* Adjusted size for smaller screens */
+        height: 35px;
     }
 
-    .testimonials ul li {
+    .slider ul li {
         padding: 10px;
     }
 
     .slide {
-        padding: 20px; /* Adjusted padding for smaller screens */
+        padding: 20px;
     }
 
     .slide img {
         width: 50px;
-        height: 50px; /* Adjusted size for smaller screens */
+        height: 50px;
         border: 3px solid #212EA0;
     }
 }
@@ -132,7 +145,7 @@
         font-size: 16px;
     }
 
-    .slider p {
-        font-size: 12px;
+    .testimonials p {
+        font-size: 14px; /* Slightly increased font size for readability */
     }
 }

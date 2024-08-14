@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import './Testimonials.css';
-import nextIcon from '../../assets/next-icon.png';
-import backIcon from '../../assets/back-icon.png';
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import user1 from '../../assets/user-1.png';
 import user2 from '../../assets/user-2.png';
 import user3 from '../../assets/user-3.png';
@@ -27,8 +26,8 @@ const Testimonials = () => {
 
     return (
         <div className="testimonials">
-            <img src={nextIcon} alt="Next" className="next-btn" onClick={slideForward} />
-            <img src={backIcon} alt="Back" className="back-btn" onClick={slideBackward} />
+            <FaArrowRight className="next-btn" onClick={slideForward} />
+            <FaArrowLeft className="back-btn" onClick={slideBackward} />
             <div className="slider">
                 <ul ref={slider}>
                     <li>
@@ -40,7 +39,7 @@ const Testimonials = () => {
                                     <span>Edusity, USA</span>
                                 </div>
                             </div>
-                            <p>"I couldn't be happier with my purchase from Afro Eco Habitat. The quality of the marble is exceptional, and it has transformed my kitchen into a luxurious space. The customer service was fantastic, guiding me through the selection process and ensuring timely delivery. Highly recommend!"</p>
+                            <p>"I couldn't be happier with my purchase from Afri Eco Habitat. The quality of the marble is exceptional, and it has transformed my kitchen into a luxurious space. The customer service was fantastic, guiding me through the selection process and ensuring timely delivery. Highly recommend!"</p>
                         </div>
                     </li>
                     <li>
@@ -52,19 +51,19 @@ const Testimonials = () => {
                                     <span>Alberta, Canada</span>
                                 </div>
                             </div>
-                            <p>"Afro Eco Habitat exceeded my expectations with their stunning marble products. The craftsmanship is top-notch, and the unique patterns add a touch of elegance to my home. The team was professional and attentive, making the entire experience seamless. I'll definitely be a returning customer!"</p>
+                            <p>"Afri Eco Habitat exceeded my expectations with their stunning marble products. The craftsmanship is top-notch, and the unique patterns add a touch of elegance to my home. The team was professional and attentive, making the entire experience seamless. I'll definitely be a returning customer!"</p>
                         </div>
                     </li>
                     <li>
                         <div className="slide">
                             <div className="user-info">
-                                <img src={user3} alt="Sami Ayedi" />
+                                <img src={user3} alt="Samira Ayedi" />
                                 <div>
                                     <h3>Samira Ayedi</h3>
                                     <span>Tunis, Tunisia</span>
                                 </div>
                             </div>
-                            <p>"From start to finish, our experience with Afro Eco Habitat was fantastic. The marble selection was extensive, and the staff was incredibly helpful. Our new flooring looks amazing, and we couldn’t be happier!"</p>
+                            <p>"From start to finish, our experience with Afri Eco Habitat was fantastic. The marble selection was extensive, and the staff was incredibly helpful. Our new flooring looks amazing, and we couldn’t be happier!"</p>
                         </div>
                     </li>
                     <li>
@@ -76,7 +75,7 @@ const Testimonials = () => {
                                     <span>Paris, France</span>
                                 </div>
                             </div>
-                            <p>"We were impressed by the variety and quality of marble at Afro Eco Habitat. The installation was seamless, and the finished product is absolutely beautiful. Exceptional service and outstanding products!"</p>
+                            <p>"We were impressed by the variety and quality of marble at Afri Eco Habitat. The installation was seamless, and the finished product is absolutely beautiful. Exceptional service and outstanding products!"</p>
                         </div>
                     </li>
                 </ul>

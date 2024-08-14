@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import './VideoPlayer.css'; // Adjusted to match the correct CSS filename and path
-import Video from '../../assets/Video.mp4'; // Adjusted to match your video asset
+import './VideoPlayer.css'; // Ensure this path is correct
+import Video from '../../assets/Video.mp4'; // Ensure this path is correct
 
 const VideoPlayer = ({ playState, setPlayState }) => {
     const player = useRef(null);
@@ -12,7 +12,7 @@ const VideoPlayer = ({ playState, setPlayState }) => {
     };
 
     return (
-        <div className={`video-player ${playState ? '' : 'hide'}`} ref={player} onClick={closePlayer}>
+        <div className={`video-player ${playState ? 'show' : 'hide'}`} ref={player} onClick={closePlayer}>
             <video src={Video} autoPlay muted controls></video>
         </div>
     );

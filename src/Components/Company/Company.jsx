@@ -16,7 +16,7 @@ const Company = () => {
         <img src={gallery4} alt='Gallery Image 4' />
       </div>
       <button className='btn dark-btn'>
-        See more here 
+        See More Here 
         <img src={white_arrow} alt='Arrow Icon' />
       </button>
     </div>

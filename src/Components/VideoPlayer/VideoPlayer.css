@@ -1,23 +1,33 @@
+/* Video Player Styling */
 .video-player {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 100;
+    background: rgba(0, 0, 0, 0.8); /* Slightly less opaque for a softer overlay */
+    z-index: 1000; /* Higher z-index to ensure it's above other elements */
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for visibility */
 }
 
 .video-player video {
     width: 90%;
-    max-width: 900px;
+    max-width: 90%; /* Ensures better fit on large screens */
     height: auto;
-    border: 4px solid #fff;
+    border: 5px solid #fff; /* Slightly thicker border for better visibility */
+    border-radius: 10px; /* Rounded corners for a more modern look */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Adds depth with shadow */
 }
 
 .video-player.hide {
-    display: none;
+    opacity: 0;
+    visibility: hidden; /* Ensures the element is completely hidden when not in use */
+}
+
+.video-player.show {
+    opacity: 1;
+    visibility: visible; /* Ensures the element is visible when in use */
 }
